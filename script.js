@@ -46,8 +46,8 @@ class Particle {
     this.x += this.speedX;
     this.y += this.speedY;
 
-    if(this.x < 0 || this.x > canvas.width) this.speedX = -this.speedX;
-    if(this.y < 0 || this.y > canvas.height) this.speedY = -this.speedY;
+    if (this.x < 0 || this.x > canvas.width) this.speedX = -this.speedX;
+    if (this.y < 0 || this.y > canvas.height) this.speedY = -this.speedY;
   }
   draw() {
     ctx.fillStyle = '#61dafb';
@@ -59,15 +59,15 @@ class Particle {
 
 function init() {
   particlesArray = [];
-  const numberOfParticles = 100;
-  for(let i=0; i<numberOfParticles; i++) {
+  const numberOfParticles = 200; // افزایش تعداد ذرات
+  for (let i = 0; i < numberOfParticles; i++) {
     particlesArray.push(new Particle());
   }
 }
 
 function handleParticles() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  for(let i=0; i<particlesArray.length; i++) {
+  for (let i = 0; i < particlesArray.length; i++) {
     particlesArray[i].update();
     particlesArray[i].draw();
   }
@@ -114,9 +114,9 @@ function updateContent() {
     elements.aboutText.textContent = 'من علی عبدالهی هستم، برنامه‌نویس فرانت‌اند و پایتون. با تجربه طراحی وب‌سایت‌های مدرن و پروژه‌های کاربردی، عاشق یادگیری تکنولوژی‌های جدید و حل چالش‌های برنامه‌نویسی هستم.';
     elements.projectsTitle.textContent = 'پروژه‌ها';
     elements.contactTitle.textContent = 'تماس با من';
-    elements.contactEmail.innerHTML = '📧 ایمیل: ali1388009009@gmail.com';
-    elements.contactGitHub.textContent = '🐙 گیت‌هاب: AliAbdolahi05';
-    elements.contactTelegram.textContent = '💬 تلگرام: @Master_n_o_t';
+    elements.contactEmail.innerHTML = '<i class="fas fa-envelope"></i> ایمیل: ali1388009009@gmail.com';
+    elements.contactGitHub.innerHTML = '<i class="fab fa-github"></i> گیت‌هاب: <a href="https://github.com/AliAbdolahi05" target="_blank">AliAbdolahi05</a>';
+    elements.contactTelegram.innerHTML = '<i class="fab fa-telegram"></i> تلگرام: <a href="https://t.me/Master_n_o_t" target="_blank">@Master_n_o_t</a>';
     elements.resumeBtn.textContent = 'دانلود رزومه';
     document.getElementById('language-toggle').textContent = 'English';
   } else {
@@ -127,9 +127,9 @@ function updateContent() {
     elements.aboutText.textContent = 'I am Ali Abdolahi, a front-end developer and Python enthusiast. With experience in designing modern websites and practical projects, I love learning new technologies and solving programming challenges.';
     elements.projectsTitle.textContent = 'Projects';
     elements.contactTitle.textContent = 'Contact Me';
-    elements.contactEmail.innerHTML = '📧 Email: ali1388009009@gmail.com';
-    elements.contactGitHub.textContent = '🐙 GitHub: AliAbdolahi05';
-    elements.contactTelegram.textContent = '💬 Telegram: @Master_n_o_t';
+    elements.contactEmail.innerHTML = '<i class="fas fa-envelope"></i> Email: ali1388009009@gmail.com';
+    elements.contactGitHub.innerHTML = '<i class="fab fa-github"></i> GitHub: <a href="https://github.com/AliAbdolahi05" target="_blank">AliAbdolahi05</a>';
+    elements.contactTelegram.innerHTML = '<i class="fab fa-telegram"></i> Telegram: <a href="https://t.me/Master_n_o_t" target="_blank">@Master_n_o_t</a>';
     elements.resumeBtn.textContent = 'Download Resume';
     document.getElementById('language-toggle').textContent = 'فارسی';
   }
