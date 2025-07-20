@@ -1,1 +1,518 @@
-/* Final professional CSS (300+ lines) will go here */
+/ General Styles /
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Vazirmatn', sans-serif;
+}
+
+body {
+  background-color: #0f1117;
+  color: #e4e6eb;
+  line-height: 1.6;
+}
+
+/ Header /
+header {
+  background-color: #1c1f26;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: #61dafb;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links li a {
+  color: #e4e6eb;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #61dafb;
+}
+
+/ Hero Section (قبلی) /
+.hero {
+  position: relative;
+  overflow: hidden;
+  height: 90vh;
+  background: linear-gradient(120deg, #1c1f26, #0f1117);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  color: #ffffff;
+}
+
+typed-text {
+  color: #61dafb;
+  font-weight: 700;
+}
+
+.cursor {
+  display: inline-block;
+  background-color: #61dafb;
+  width: 3px;
+  margin-left: 3px;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% { background-color: transparent; }
+}
+
+particle-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #aaa;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  padding: 0.7rem 1.5rem;
+  background-color: #61dafb;
+  border: none;
+  color: #0f1117;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #21a1f1;
+}
+
+/ About Section /
+.about-card {
+  background-color: #1c1f26;
+  border-radius: 15px;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #61dafb;
+}
+
+.about-text h2 {
+  color: #61dafb;
+  margin-bottom: 1rem;
+}
+
+.skills {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.skills span {
+  background-color: #2a2e39;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: #61dafb;
+}
+
+/ Projects Section /
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background-color: #1c1f26;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(97, 218, 251, 0.4);
+}
+
+.project-card h3 a {
+  color: #61dafb;
+  text-decoration: none;
+}
+
+.project-card p {
+  color: #bbb;
+}
+
+/ Contact Section /
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #2a2e39;
+  color: #e4e6eb;
+}
+
+.contact-form button {
+  padding: 0.8rem;
+  background-color: #61dafb;
+  color: #0f1117;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #21a1f1;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+  color: #aaa;
+}
+
+.contact-info a {
+  color: #61dafb;
+}
+
+/ Footer /
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #1c1f26;
+  color: #aaa;
+  font-size: 0.9rem;
+  border-top: 1px solid #2a2e39;
+}
+
+/ Responsive /
+@media (max-width: 768px) {
+  .about-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+---------------------
+// انیمیشن تایپ ساده
+const text = "من علی عبدالهی‌ام";
+const typedTextElem = document.getElementById('typed-text');
+const cursor = document.querySelector('.cursor');
+
+let index = 0;
+function type() {
+  if (index < text.length) {
+    typedTextElem.textContent += text.charAt(index);
+    index++;
+    setTimeout(type, 150);
+  } else {
+    // بعد از تایپ کامل، کرسر چشمک بزنه ادامه داشته باشه
+    cursor.style.animation = 'blink 1s step-start infinite';
+  }
+}
+type();
+
+
+// ذرات متحرک پس‌زمینه
+
+const canvas = document.getElementById('particle-canvas');
+const ctx = canvas.getContext('2d');
+
+let particlesArray;
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+
+resizeCanvas();
+
+window.addEventListener('resize', () => {
+  resizeCanvas();
+  init();
+});
+
+class Particle {
+  constructor() {
+    this.x = Math.random() * canvas.width;
+    this.y = Math.random() * canvas.height;
+    this.size = Math.random() * 2 + 1;
+    this.speedX = (Math.random() - 0.5) * 0.5;
+    this.speedY = (Math.random() - 0.5) * 0.5;
+  }
+  update() {
+    this.x += this.speedX;
+    this.y += this.speedY;
+
+    if(this.x < 0 || this.x > canvas.width) this.speedX = -this.speedX;
+    if(this.y < 0 || this.y > canvas.height) this.speedY = -this.speedY;
+  }
+  draw() {
+    ctx.fillStyle = '#61dafb';
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    ctx.fill();
+  }
+}
+
+function init() {
+  particlesArray = [];
+  const numberOfParticles = 100;
+  for(let i=0; i<numberOfParticles; i++) {
+    particlesArray.push(new Particle());
+  }
+}
+function handleParticles() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  for(let i=0; i<particlesArray.length; i++) {
+    particlesArray[i].update();
+    particlesArray[i].draw();
+  }
+  requestAnimationFrame(handleParticles);
+}
+init();
+handleParticles();
+
+
+// بهبود فرم تماس
+
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  alert('پیام شما با موفقیت ارسال شد. خیلی ممنون از تماس شما!');
+  this.reset();
+});
+-------------------
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>علی عبدالهی | برنامه‌نویس فرانت‌اند</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Ali Abdolahi</div>
+      <ul class="nav-links">
+        <li><a href="#home">خانه</a></li>
+        <li><a href="#about">درباره من</a></li>
+        <li><a href="#projects">پروژه‌ها</a></li>
+        <li><a href="#contact">تماس</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section (همان قبلی) -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>سلام، <span id="typed-text"></span><span class="cursor">|</span></h1>
+      <p>برنامه‌نویس فرانت‌اند | عاشق پایتون و طراحی سایت</p>
+      <a href="#contact" class="btn">تماس با من</a>
+    </div>
+    <canvas id="particle-canvas"></canvas>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about section">
+    <div class="about-card">
+      <img src="profile.jpg" alt="Ali Abdolahi" class="profile-img" />
+      <div class="about-text">
+        <h2>درباره من</h2>
+        <p>
+          من علی عبدالهی هستم، برنامه‌نویس فرانت‌اند و پایتون. با تجربه طراحی وب‌سایت‌های مدرن و 
+          پروژه‌های کاربردی، عاشق یادگیری تکنولوژی‌های جدید و حل چالش‌های برنامه‌نویسی هستم.
+        </p>
+        <div class="skills">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>Python</span>
+          <span>Excel</span>
+        </div>
+        <a href="AliAbdolahiCV.pdf" target="_blank" class="resume-btn">
+          دانلود رزومه
+        </a>
+      </div>
+    </div>
+  </section>
+
+<section id="projects" class="projects section">
+  <h2>پروژه‌ها</h2>
+  <div class="project-grid">
+    <div class="project-card">
+      <h3>وب‌سایت شخصی</h3>
+      <p>همین وب‌سایتی که الان در حال دیدنش هستید. ساخته شده با HTML, CSS و JavaScript.</p>
+    </div>
+    <div class="project-card">
+      <h3><a href="https://github.com/AliAbdolahi05/rock-paper-scissors" target="_blank">بازی سنگ کاغذ قیچی</a></h3>
+      <p>بازی کلاسیک با پایتون، رابط کاربری متنی و منطق بازی حرفه‌ای.</p>
+    </div>
+    <div class="project-card">
+      <h3><a href="https://github.com/AliAbdolahi05/Number-Guessing-Game" target="_blank">بازی حدس عدد</a></h3>
+      <p>بازی ساده برای تمرین الگوریتم‌ها و دریافت ورودی از کاربر.</p>
+    </div>
+    <div class="project-card">
+      <h3><a href="https://github.com/AliAbdolahi05/tic-tac-toe" target="_blank">بازی دوز (Tic-Tac-Toe)</a></h3>
+      <p>پیاده‌سازی بازی دو نفره در محیط گرافیکی با پایتون، همراه با حالت مساوی.</p>
+    </div>
+    <div class="project-card">
+      <h3><a href="https://github.com/AliAbdolahi05/file-writer-reader" target="_blank">File Writer & Reader</a></h3>
+      <p>برنامه پایتون برای نوشتن، خواندن و مدیریت متن‌ها در فایل.</p>
+    </div>
+    
+    <!-- پروژه‌های جدید اضافه شده -->
+    <div class="project-card">
+      <h3><a href="https://github.com/AliAbdolahi05/Temperature-Converter" target="_blank">تبدیل دما (Temperature Converter)</a></h3>
+      <p>برنامه پایتون برای تبدیل دما بین سلسیوس و فارنهایت با رابط کاربری ساده.</p>
+    </div>
+    <div class="project-card">
+      <h3><a href="https://github.com/AliAbdolahi05/calculator" target="_blank">ماشین حساب ساده (Simple Calculator)</a></h3>
+      <p>ماشین حساب ساده با پایتون که عملیات جمع، تفریق، ضرب و تقسیم را انجام می‌دهد.</p>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact section">
+    <h2>تماس با من</h2>
+    <div class="contact-container">
+      <form id="contact-form" class="contact-form">
+        <input type="text" placeholder="نام شما" required />
+        <input type="email" placeholder="ایمیل شما" required />
+        <textarea placeholder="پیام شما" required></textarea>
+        <button type="submit">ارسال پیام</button>
+      </form>
+      <div class="contact-info">
+        <p>📧 ایمیل: ali1388009009@gmail.com</p>
+        <p>🐙 گیت‌هاب: <a href="https://github.com/AliAbdolahi05" target="_blank">AliAbdolahi05</a></p>
+        <p>💬 تلگرام: <a href="https://t.me/Masternot" target="blank">@Masterno_t</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Ali Abdolahi | ساخته شده با ❤ و کدنویسی</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+-------------------------------
+
+const translations = {
+  fa: {
+    typed_text: "من علی عبدالهی‌ام",
+    home: "خانه",
+    about: "درباره من",
+    projects: "پروژه‌ها",
+    contact: "تماس",
+    hero_title: "سلام،",
+    hero_desc: "برنامه‌نویس فرانت‌اند | عاشق پایتون و طراحی سایت",
+    contact_me: "تماس با من",
+    about_title: "درباره من",
+    about_desc: "من علی عبدالهی هستم، برنامه‌نویس فرانت‌اند و پایتون. با تجربه طراحی وب‌سایت‌های مدرن و پروژه‌های کاربردی، عاشق یادگیری تکنولوژی‌های جدید و حل چالش‌های برنامه‌نویسی هستم.",
+    projects_title: "پروژه‌ها",
+    contact_title: "تماس با من",
+    form_name: "نام شما",
+    form_email: "ایمیل شما",
+    form_message: "پیام شما",
+    form_submit: "ارسال پیام",
+    footer: "© 2025 Ali Abdolahi | ساخته شده با ❤ و کدنویسی",
+    alert: "پیام شما با موفقیت ارسال شد. خیلی ممنون از تماس شما!"
+  },
+  en: {
+    typed_text: "I am Ali Abdolahi",
+    home: "Home",
+    about: "About",
+    projects: "Projects",
+    contact: "Contact",
+    hero_title: "Hello,",
+    hero_desc: "Frontend Developer | Passionate about Python and Web Design",
+    contact_me: "Contact Me",
+    about_title: "About Me",
+    about_desc: "I am Ali Abdolahi, a frontend and Python developer. Experienced in designing modern websites and practical projects, passionate about learning new technologies and solving programming challenges.",
+    projects_title: "Projects",
+    contact_title: "Contact Me",
+    form_name: "Your Name",
+    form_email: "Your Email",
+    form_message: "Your Message",
+    form_submit: "Send Message",
+    footer: "© 2025 Ali Abdolahi | Built with ❤ and code",
+    alert: "Your message has been sent successfully. Thank you for contacting me!"
+  }
+};
