@@ -216,12 +216,13 @@ header {
   padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(97, 218, 251, 0.4);
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(97, 218, 251, 0.6);
+  background-color: rgba(97, 218, 251, 0.1);
 }
 
 .project-card h3 a {
@@ -300,4 +301,14 @@ footer {
     flex-direction: column;
     text-align: center;
   }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.section {
+  animation: fadeIn 0.8s ease-in-out;
 }
