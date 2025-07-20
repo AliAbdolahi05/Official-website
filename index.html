@@ -21,11 +21,6 @@
         <li><a href="#projects">پروژه‌ها</a></li>
         <li><a href="#contact">تماس</a></li>
       </ul>
-      <!-- دکمه تغییر زبان -->
-      <select id="language-switcher">
-        <option value="fa">فارسی</option>
-        <option value="en">English</option>
-      </select>
     </nav>
   </header>
 
@@ -56,7 +51,7 @@
           <span>Python</span>
           <span>Excel</span>
         </div>
-        <a href="AliAbdolahiCV.pdf" target="_blank" class="resume-btn">
+        <a href="Ali_Abdolahi_CV.pdf" target="_blank" class="resume-btn">
           دانلود رزومه
         </a>
       </div>
@@ -66,9 +61,47 @@
   <!-- Projects Section -->
   <section id="projects" class="projects section">
     <h2>پروژه‌ها</h2>
-    <div class="project-grid">
-      <!-- کارت‌های پروژه همان قبلی -->
-      ...
+    <div class="tabs">
+      <button class="tablink active" onclick="openTab(event, 'allProjects')">همه پروژه‌ها</button>
+      <button class="tablink" onclick="openTab(event, 'recentProjects')">پروژه‌های جدید</button>
+    </div>
+
+    <div id="allProjects" class="tabcontent active">
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>وب‌سایت شخصی</h3>
+          <p>همین وب‌سایتی که الان در حال دیدنش هستید. ساخته شده با HTML, CSS و JavaScript.</p>
+        </div>
+        <div class="project-card">
+          <h3><a href="https://github.com/AliAbdolahi05/rock-paper-scissors" target="_blank">بازی سنگ کاغذ قیچی</a></h3>
+          <p>بازی کلاسیک با پایتون، رابط کاربری متنی و منطق بازی حرفه‌ای.</p>
+        </div>
+        <div class="project-card">
+          <h3><a href="https://github.com/AliAbdolahi05/Number-Guessing-Game" target="_blank">بازی حدس عدد</a></h3>
+          <p>بازی ساده برای تمرین الگوریتم‌ها و دریافت ورودی از کاربر.</p>
+        </div>
+        <div class="project-card">
+          <h3><a href="https://github.com/AliAbdolahi05/tic-tac-toe" target="_blank">بازی دوز (Tic-Tac-Toe)</a></h3>
+          <p>پیاده‌سازی بازی دو نفره در محیط گرافیکی با پایتون، همراه با حالت مساوی.</p>
+        </div>
+        <div class="project-card">
+          <h3><a href="https://github.com/AliAbdolahi05/file-writer-reader" target="_blank">File Writer & Reader</a></h3>
+          <p>برنامه پایتون برای نوشتن، خواندن و مدیریت متن‌ها در فایل.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="recentProjects" class="tabcontent">
+      <div class="project-grid">
+        <div class="project-card">
+          <h3><a href="https://github.com/AliAbdolahi05/Temperature-Converter" target="_blank">تبدیل دما (Temperature Converter)</a></h3>
+          <p>برنامه پایتون برای تبدیل دما بین سلسیوس و فارنهایت با رابط کاربری ساده.</p>
+        </div>
+        <div class="project-card">
+          <h3><a href="https://github.com/AliAbdolahi05/calculator" target="_blank">ماشین حساب ساده (Simple Calculator)</a></h3>
+          <p>ماشین حساب ساده با پایتون که عملیات جمع، تفریق، ضرب و تقسیم را انجام می‌دهد.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -85,7 +118,7 @@
       <div class="contact-info">
         <p>📧 ایمیل: ali1388009009@gmail.com</p>
         <p>🐙 گیت‌هاب: <a href="https://github.com/AliAbdolahi05" target="_blank">AliAbdolahi05</a></p>
-        <p>💬 تلگرام: <a href="https://t.me/Masternot" target="blank">@Masterno_t</a></p>
+        <p>💬 تلگرام: <a href="https://t.me/Master_n_o_t" target="_blank">@Master_n_o_t</a></p>
       </div>
     </div>
   </section>
@@ -95,5 +128,26 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    function openTab(evt, tabName) {
+      const tabcontent = document.getElementsByClassName("tabcontent");
+      for (let i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].classList.remove("active");
+      }
+
+      const tablinks = document.getElementsByClassName("tablink");
+      for (let i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active");
+      }
+
+      document.getElementById(tabName).classList.add("active");
+      evt.currentTarget.classList.add("active");
+    }
+
+    // به صورت پیش‌فرض زبانه اول را باز کنید
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelector('.tablink').click();
+    });
+  </script>
 </body>
-  </html>
+</html>
