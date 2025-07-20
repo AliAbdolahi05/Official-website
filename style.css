@@ -50,6 +50,20 @@ header {
   color: #61dafb;
 }
 
+#language-toggle {
+  background-color: #61dafb;
+  border: none;
+  color: #0f1117;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#language-toggle:hover {
+  background-color: #21a1f1;
+}
+
 /* Hero Section */
 .hero {
   position: relative;
